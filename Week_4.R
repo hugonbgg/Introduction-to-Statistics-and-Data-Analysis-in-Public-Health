@@ -36,3 +36,9 @@ chisq.test(x= dados$gender, y = dados$five_a_day)
 t.test(dados$bmi~dados$cancer)
 
 t.test(dados$bmi, mu = 25)
+
+#Exercicio
+cancer <- dados$cancer
+
+overweight <- ifelse(dados$bmi >= 25, 1, 0)
+chisq.test(x = overweight, y = cancer)
